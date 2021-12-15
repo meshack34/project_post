@@ -32,7 +32,7 @@ View [live](http)
 ## Setup Instruction
 To access this project on your local files, you can clone it using these steps
 1. Open your terminal
-1. Use this command to clone $ git clone https://github.com/kimutaimeshack/MYPHOTOSPROJECT.git
+1. Use this command to clone $ git clone https://github.com/kimutaimeshack/project_post.git
 1. This will clone the repositoty into your local folder
 *****
 
