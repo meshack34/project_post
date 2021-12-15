@@ -21,7 +21,7 @@ by [MESHACK KIMUTAI](https://github.com/kimutaimeshack?tab=repositories)
 
 
 ### Live Site
-View [live](http)
+View [live](https://projectpost001.herokuapp.com/)
 
 ### Prerequisites
 * Python 3
