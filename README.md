@@ -3,7 +3,12 @@
 by [MESHACK KIMUTAI](https://github.com/kimutaimeshack?tab=repositories)
 *********
 ## Description
-
+<table>
+<tr>
+<td>The application will allow a user to post a project he/she has created and get it reviewed,search project and allow for comments.It is built with Django python framework.
+</td>
+</tr>
+</table>
 
 
 ### User story
