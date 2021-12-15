@@ -4,16 +4,19 @@ by [MESHACK KIMUTAI](https://github.com/kimutaimeshack?tab=repositories)
 *********
 ## Description
 
-<table>
-<tr>
-<td>
-This is a Django application of a personal gallery with different photos of my interests. It enables one to click on a single photo, views details, search different photo categories, copy links of photos for sharing, and based on location view a photo.It is built with Django python framework.
-</td>
-</tr>
-</table>
+
+
+### User story
+* View posted projects and their details
+* Post a project to be rated/reviewed
+* Rate/ review other users' projects
+* Search for projects 
+* View projects overall score
+* View my profile page
+
 
 ### Live Site
-View [live](https://myphotosapp001.herokuapp.com/)
+View [live](http)
 
 ### Prerequisites
 * Python 3
