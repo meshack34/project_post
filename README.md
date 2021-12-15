@@ -1,4 +1,4 @@
-# MY PHOTOS 
+# PROJECT POST
 ## Author
 by [MESHACK KIMUTAI](https://github.com/kimutaimeshack?tab=repositories)
 *********
