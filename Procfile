@@ -1,0 +1,1 @@
+web: gunicorn myphotosproject.wsgi --log-file -
