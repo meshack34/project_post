@@ -6,9 +6,9 @@
   <meta charset="utf-8">
 
   {% if title %}
-  <title> Photos {{title}}</title>
+  <title> postpost {{title}}</title>
   {% else %}
-    <title> photos </title>
+    <title> postpost </title>
   {% endif %}
 
   {% block styles %}
@@ -20,7 +20,7 @@
 <body>
     {% include "navbar.html" %}
 
-    {% block content %} <h1 class='text-center'>My Photos</h1> {%endblock%}
+    {% block content %} <h1 class='text-center'>postpost</h1> {%endblock%}
 
     {% block scripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
