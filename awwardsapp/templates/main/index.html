@@ -13,13 +13,15 @@
       <div class="col-md-4">
             
         <div class="card mb-4">
-            <h4 class="text-center"><strong>Title:</strong>{{project.title}}</h4>
+          <div class="cardshow">
+          
+            <h4 class="text-center"><strong>Project Name:</strong>{{project.title}}</h4>
             <img src="{{ project.image.url }}" class="img-responsive" alt="Image">
-            <p><strong>Description: </strong>{{project.description}}</p>
-            <button><a href="{{project.link}}">Project Link</a></button>
+            <p><strong>Details: </strong>{{project.description}}</p>
+            <button><a href="{{project.link}}">Live Link</a></button>
             <small class="text-muted">{{project.pub_date}}</small>
             <p><i><a href="{% url 'project_review' project.id %}">Reviews</a></i></p>
-
+           </div>
         </div>
       </div>
       {% endfor %}

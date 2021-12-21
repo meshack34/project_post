@@ -7,3 +7,11 @@ h1{
 body{
   background-color: aquamarine;
 }
+.card{
+  text-align: center;
+  background-color: azure;
+}
+.cardshow{
+  border: 10px solid green;
+  background-color: chartreuse;
+}
