@@ -20,3 +20,21 @@ body{
 .mynewnav{
   text-align: center;
 }
+header .navbar a {
+  margin: 1.5rem;
+  padding: 1.5rem;
+  display: block;
+  border: .2rem solid rgba(0, 0, 0, .1);
+  border-left: .5rem solid var(--red);
+  background: #fff;
+}
+
+
+@media(max-width:450px) {
+
+  html {
+    font-size: 50%;
+  }
+
+
+}
