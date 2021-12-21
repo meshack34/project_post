@@ -1,0 +1,39 @@
+{%extends 'main/base.html'%}
+{%load bootstrap3%}
+{%load static%}
+{%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 col-lg-7">
+            <img src="{{project.screen_shot.url}}" alt="Image" width="100%">
+            <h3>Project Title: {{project.project_title}}</h3>
+            <h3>About: {{project.project_about}}</h3>
+            <p>{{project.project_description}}</p>
+            <p>Technologies used: {{project.technologies}}</p>
+        </div>
+        <div class="col-md-5 col-lg-5">
+            <form class="form" action="{%url 'reviews'%}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_form form%}
+                <div class="row pl-5">
+                    <button type="submit" class="btn btn-md btn-outline-primary"
+                        style="margin-bottom:5%">Submit</button>
+                </div>
+            </form>
+            <div>
+                <h3 class="text-center">This project has {{reviews.count}} reviews so far.</h3>
+                {%for review in reviews%}
+                <div style="margin:10px">
+                <h3>{{review.user}}</h3>
+                <p>{{review.reviews}}</p>
+                <i>Posted {{review.posted_on|timesince}} ago.</i>
+                </div>
+                <hr>
+                {%endfor%}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{%endblock%}

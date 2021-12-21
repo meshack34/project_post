@@ -1,0 +1,73 @@
+{%extends 'main/base.html'%}
+{% block content %}
+{% if project.image %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+         <p><em>User: </em>{{ user.username }}</p>
+        </div>
+            <div class="col-md-8">
+                <p><strong>Title:</strong> {{project.title}}</p>
+                <p><strong>Project Description:</strong>{{ project.description|safe }}</p>
+                <p><strong>Date posted:</strong>{{ project.pub_date|date }}</p>
+            </div>
+    </div>
+    <section style="height: 90vh; background-repeat: no-repeat;background-size: cover;background-position: center; background-image: url({{project.image.url}})">
+
+        {% else %}
+        <section>
+        {% endif %}
+
+        </section>
+        
+    </section>
+    <div class="row rating">
+        <div class="col-md-6">
+            <form action="{% url 'rating' project.id %}" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="Design">Design</label>
+                    <input type="number" class="form-control" name="design" min="0" max="10" value="0">
+                </div>
+                <div class="mb-3">
+                    <label for="Content">Content</label>
+                    <input type="number" class="form-control" name="content" min="0" max="10" value="0">
+                </div>
+                <div class="mb-3">
+                    <label for="Usability">Usability</label>
+                    <input type="number" class="form-control" name="usability" min="0" max="10" value="0">
+                </div>
+                <button class="btn btn-warning btn-sm" type="submit">Rate</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h2 class="text-center">Project Reviews</h2>
+           <p>
+               {% for rate in rating %}
+           
+               <div class="row text-center">
+                   <div class="col-md-3">
+                       <p>Reviewer: {{rate.user.username}}</p>
+                       <p>Average Rate: {{rate.average}} </p>
+                   </div>
+                   <div class="col-md-3">
+                       <p>Design Rate: {{rate.design_rate}}</p>
+                   </div>
+                   <div class="col-md-3">
+                       <p>Content Rate: {{rate.content_rate}}</p>
+                   </div>
+                   <div class="col-md-3">
+                       <p>Usability Rate:{{rate.usability_rate}}</p>
+                   </div>
+               </div>
+               {% empty %}
+               <p class="alert alert-danger" role="alert">Not rated</p>
+               {% endfor %}
+           </p>
+       </div>
+    </div>
+    
+</div>
+
+{% endblock %}

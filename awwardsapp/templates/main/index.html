@@ -1,0 +1,28 @@
+{%extends 'main/base.html'%}
+
+{% block content %}
+{{block.super}}
+
+<div class="container-fluid">
+  <div class="row top">
+    
+
+  </div>
+  <div class="row">
+      {% for project in projects %}
+      <div class="col-md-4">
+            
+        <div class="card mb-4">
+            <h4 class="text-center"><strong>Title:</strong>{{project.title}}</h4>
+            <img src="{{ project.image.url }}" class="img-responsive" alt="Image">
+            <p><strong>Description: </strong>{{project.description}}</p>
+            <button><a href="{{project.link}}">Project Link</a></button>
+            <small class="text-muted">{{project.pub_date}}</small>
+            <p><i><a href="{% url 'project_review' project.id %}">Reviews</a></i></p>
+
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% load bootstrap3 %}
+{% load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  {% if title %}
+  <title>post Project{{title}}</title>
+  {% else %}
+    <title> Post Your Project </title>
+  {% endif %}
+
+  {% block styles %}
+    {% bootstrap_css %}
+  {% endblock %}
+<link href="{% static 'css/base.css' %}" rel="stylesheet">
+</head>
+<body>
+    {% include "navbar.html" %}
+    {% block content %} <h1 class="text-center">The Project Awwards</h1> {%endblock%}
+    {% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     {% bootstrap_javascript %}
+    {% endblock %}
+</body>
+</html>

@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from awwardsapp.models import Profile,Project,Rating
+
+admin.site.register(Profile)
+admin.site.register(Rating)
+admin.site.register(Project)
